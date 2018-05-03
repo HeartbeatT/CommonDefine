@@ -49,6 +49,34 @@ return self;\
 }\
 
 
+/**
+ image
+ 
+ @param pointer nameString
+ @return iamge
+ */
+#define TImageNamed(pointer) [UIImage imageNamed:[UIUtil imageName:pointer］
 
+
+
+//Height
+#define TScreenHeight ([UIScreen mainScreen].applicationFrame.size.height)
+
+//Width
+#define TScreenWidth ([UIScreen mainScreen].applicationFrame.size.width)
+
+
+/**
+ *  Release  NSLog
+ *
+ *  @param ...
+ *
+ *  @return
+ */
+#ifndef __OPTIMIZE__
+#    define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#    define NSLog(...) {}
+#endif
 
 #endif /* Common_h */
