@@ -1,9 +1,4 @@
 
-
-#ifndef Common_h
-#define Common_h
-
-
 #ifndef Common_h
 #define Common_h
 
@@ -78,5 +73,26 @@ return self;\
 #else
 #    define NSLog(...) {}
 #endif
+
+
+
+/**
+ systemFont
+ 
+ @param a fontSize
+ @return
+ */
+#define sysFont(a)   [UIFont systemFontOfSize:a]
+
+
+/**
+ block
+ 
+ @param type
+ @return
+ */
+#define WeakSelf(type)  __weak typeof(type) weak##type = type;
+#define StrongSelf(type)  __strong typeof(type) type = weak##type;
+
 
 #endif /* Common_h */
